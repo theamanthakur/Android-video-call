@@ -3,6 +3,7 @@ buildscript {
     repositories {
         google()
         mavenCentral()
+
     }
     dependencies {
         classpath "com.android.tools.build:gradle:4.2.0"
@@ -14,11 +15,15 @@ buildscript {
     }
 }
 
+
 allprojects {
     repositories {
         google()
         mavenCentral()
         jcenter() // Warning: this repository is going to shut down soon
+        maven {
+            url "https://github.com/jitsi/jitsi-maven-repository/raw/master/releases"
+        }
     }
 }
 
